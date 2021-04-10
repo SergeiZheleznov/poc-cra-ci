@@ -10,7 +10,7 @@ jobs:
       # install dependencies
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: cd sources/my-app && npm ci
       - run:
           name: Run tests
           command: npm run test
