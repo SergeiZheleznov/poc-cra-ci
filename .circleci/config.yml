@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.16.3
-    working_directory: ~/repo/sources/my-app
+    working_directory: ~/sources/my-app
     steps:
       - checkout
       # install dependencies
