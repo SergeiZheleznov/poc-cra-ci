@@ -4,13 +4,15 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.16.3
-    working_directory: ~/poc-cra-ci/sources/my-app
+    working_directory: ~/project/poc-cra-ci
     steps:
       - checkout
       # install dependencies
       - run:
           name: Install Dependencies
-          command: cd sources/my-app && npm ci
+          command: |
+            cd sources/my-app
+            npm ci
       - run:
           name: Run tests
           command: cd sources/my-app && npm run test
